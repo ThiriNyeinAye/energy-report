@@ -32,7 +32,7 @@ export const WaterLevelChart = (props: Props) => {
           <Tooltip />
           <Legend />
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-          <Bar dataKey="currentWaterLevel" fill="#0095ff" barSize={30} />
+          <Bar dataKey="waterLevelValue" fill="#0095ff" barSize={30} />
         </BarChart>
       </ResponsiveContainer>
     </div>

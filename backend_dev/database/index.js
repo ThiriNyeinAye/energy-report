@@ -1,9 +1,5 @@
 const Sequelize = require("sequelize");
-const { AbnormalitiesModel } = require("./models/abnormalitiesModel");
-const { EnergyConsumptionModel } = require("./models/energyConsumptionModel");
 require("dotenv").config();
-
-console.log("user >> ", process.env.DB_NAME, process.env.DB_USER);
 
 const DBConnect = new Sequelize(
   process.env.DB_NAME,

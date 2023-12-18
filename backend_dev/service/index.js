@@ -15,18 +15,18 @@ const getEnergyConsumption = async () => {
   return energy_consumpion;
 };
 
-const getCurrentWaterLevel = async () => {
+const getWaterLevel = async () => {
   const dateCurrent = new Date();
   const currentWaterLevel = await WaterUsageModel.findOne({
     where: DBConnect.where(
-      DBConnect.fn("date", sequelize.col("createdAt")),
+      DBConnect.fn("date", DBConnect.col("createdAt")),
       "=",
       dateCurrent
     ),
   });
   if (currentWaterLevel === null) {
-    return await WaterUsage.create({
-      currentWaterLevel: 0,
+    return await WaterUsageModel.create({
+      waterLevelValue: 0,
       unit: "m",
     });
   }
@@ -39,10 +39,10 @@ const getElectricityConsumption = async () => {
 };
 
 const getCarbonFootprint = async () => {
-  const dateCurrent = "2023-06-17";
+  const dateCurrent = "2023-12-16";
   const carbonFootprint = await CarbonFootprintModel.findOne({
     where: DBConnect.where(
-      DBConnect.fn("date", sequelize.col("createdAt")),
+      DBConnect.fn("date", DBConnect.col("createdAt")),
       "=",
       dateCurrent
     ),
@@ -50,11 +50,11 @@ const getCarbonFootprint = async () => {
   return carbonFootprint;
 };
 
-const getWaterLevel = async () => {
+const getCurrentWaterLevel = async () => {
   const currentDate = "2023-12-16";
   const water_level = await WaterUsageModel.findAll({
     where: DBConnect.where(
-      DBConnect.fn("date", sequelize.col("createdAt")),
+      DBConnect.fn("date", DBConnect.col("createdAt")),
       "=",
       currentDate
     ),

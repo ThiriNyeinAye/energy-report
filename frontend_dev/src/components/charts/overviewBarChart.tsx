@@ -3,17 +3,17 @@ import { GeneratePdf } from "../tools/generatePdf";
 
 export const OverviewBarChart = () => {
   return (
-    <div className="h-[450px] mx-7 text-center flex flex-col justify-center items-center">
-      <ResponsiveContainer height="70%" width="100%">
+    <div className="h-[400px] mx-7 text-center ">
+      <ResponsiveContainer height="70%">
         <BarChart height={40} data={data}>
           <Bar dataKey="consumption" barSize={20} fill="#b80000" />
         </BarChart>
       </ResponsiveContainer>
-      <div className="text-white bg-blue-500 rounded-full w-80 my-2 py-2">
+      <div className="text-white bg-blue-500 w-100 rounded-full my-2 p-2">
         Overview
       </div>
       <div
-        className="w-80 border border-blue-500 hover:border-blue-200 py-2 rounded-full cursor-pointer"
+        className="w-100 border border-blue-500 hover:border-blue-200 py-2 rounded-full cursor-pointer"
         onClick={GeneratePdf}
       >
         ESG Readings

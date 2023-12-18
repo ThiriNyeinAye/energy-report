@@ -16,7 +16,7 @@ interface Props {
 export const EnergyConsumptionChart = (props: Props) => {
   const { energyConsumption } = props;
   return (
-    <div className="col-span-4" style={{ width: "100%", height: 250 }}>
+    <div className="col-span-4" style={{ width: "100%", height: 350 }}>
       <div className="flex justify-around pb-5">
         <div className="font-medium text-xl text-center">
           137.0M <span className="text-xs text-red-500">+18%</span>

@@ -3,5 +3,5 @@ export const energyConsumptionAPI = `${baseURL}/energy-consumption`;
 export const electricityAPI = `${baseURL}/electricity-usage`;
 export const waterLevelAPI = `${baseURL}/water-level`;
 export const currentWaterUsage = `${baseURL}/water-usage`;
-export const recycleAPI = `${baseURL}/recycle`;
+export const recycleAPI = `${baseURL}/recycle-data`;
 export const abnormalitiesAPI = `${baseURL}/abnormalities`;

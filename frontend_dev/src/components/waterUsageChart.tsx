@@ -11,7 +11,7 @@ export const WaterUsage = () => {
     setResult(data);
   };
   useEffect(() => {
-    // api();
+    api();
   }, []);
 
   if (result === null) {
@@ -27,11 +27,11 @@ export const WaterUsage = () => {
       <div className="flex justify-center">
         <div className="w-[50%]">
           <CircularProgressbar
-            value={result?.currentWaterLevel}
-            text={`${result?.currentWaterLevel}%`}
+            value={result?.waterLevelValue}
+            text={`${result?.waterLevelValue}%`}
           />
           <div className="text-sm text-center pt-4 text-gray-400">
-            Current Water Level is {result.currentWaterLevel + result.unit}
+            Current Water Level is {result.waterLevelValue + result.unit}
           </div>
         </div>
       </div>

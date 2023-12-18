@@ -12,7 +12,7 @@ export const Abnormalities = () => {
   };
 
   useEffect(() => {
-    // api();
+    api();
   }, []);
 
   return (

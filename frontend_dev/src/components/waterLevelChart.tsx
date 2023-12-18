@@ -7,12 +7,13 @@ export const WaterLevelChartComponent = () => {
   const [result, setResult] = useState();
   const api = async () => {
     const data = await fetchAPI(waterLevelAPI);
+    console.log("water >> ", data);
     setResult(data);
   };
   useEffect(() => {
-    // api();
+    api();
   }, []);
-  console.log(result);
+
   return (
     <div className="bg-white my-2 p-5 text-xl font-medium col-span-4 ">
       Water Level (Water Detention Tank)

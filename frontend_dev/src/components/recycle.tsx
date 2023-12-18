@@ -10,7 +10,7 @@ export const Recycle = () => {
     setResult(data);
   };
   useEffect(() => {
-    // api();
+    api();
   }, []);
   return (
     <div className="bg-white my-2 p-5 text-xl font-medium">

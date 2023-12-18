@@ -8,16 +8,19 @@ export const OverviewCharts = () => {
   const [energyData, setEnergyData] = useState([]);
 
   useEffect(() => {
-    // getData();
+    getData();
   }, []);
 
   const getData = async () => {
     let data = await fetchAPI(energyConsumptionAPI);
-    console.log("data >> ", data);
+    data = data.map((d: any) => {
+      return { ...d, average: 20 };
+    });
+    setEnergyData(data);
   };
 
   return (
-    <div className="flex grid grid-cols-5 bg-white p-3 my-2">
+    <div className="flex grid grid-cols-5 bg-white px-4 py-8 my-2">
       {energyData ? (
         <>
           <OverviewBarChart />
